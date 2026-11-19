@@ -10,7 +10,9 @@ The Minecraft servers in the cluster are reachable from the internet through a L
 
 ## [pico-doorbell-detector](https://github.com/cons-tan-tan/pico-doorbell-detector)
 
-TinyGo firmware for a Raspberry Pi Pico WH that listens for the doorbell and sends a notification to my phone through ntfy on the homelab. I made it because I often miss the doorbell while wearing headphones. It detects the chime from the ratio of its two tones, so it works regardless of volume or distance.
+A doorbell detector built with a Raspberry Pi Pico 2 W that listens through a microphone and sends notifications to my phone through ntfy on the homelab. I made it because I often miss the doorbell while wearing headphones.
+
+Rust and Embassy keep audio capture and notifications running alongside a small neural network on the board. I train the model in Python with TensorFlow and run it with TFLite Micro, combining its predictions with tone-pattern checks to recognize the two chimes used at home.
 
 ## [import-github-app-key](https://github.com/cons-tan-tan/import-github-app-key)
 
